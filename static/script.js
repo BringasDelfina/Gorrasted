@@ -2,12 +2,28 @@ document.addEventListener("DOMContentLoaded", async function() {
     const gorrasGrid = document.getElementById("gorras-grid");
     const carritoLateral = document.getElementById("carrito-lateral");
     const cerrarCarritoBtn = document.getElementById("cerrar-carrito");
+    const carritoIcono = document.getElementById("carrito-icono");
+    const carritoContador = document.getElementById("carrito-contador");
+    const overlay = document.getElementById('carrito-overlay');
     let productos = [];
     let carrito = [];
 
     // Cerrar carrito
     cerrarCarritoBtn.addEventListener("click", () => {
         carritoLateral.classList.remove("abierto");
+        overlay.classList.remove("activo");
+    });
+
+    overlay.addEventListener("click", () => {
+        carritoLateral.classList.remove("abierto");
+        overlay.classList.remove("activo");
+    });
+
+    // Mostrar carrito al hacer click en el icono
+    carritoIcono.addEventListener("click", () => {
+        carritoLateral.classList.add("abierto");
+        overlay.classList.add("activo");
+        actualizarCarrito();
     });
 
     // Cargar productos desde JSON
@@ -57,14 +73,15 @@ document.addEventListener("DOMContentLoaded", async function() {
         const actualItem = carrito.find(p => p.id === id);
         cantidadSpan.textContent = actualItem ? actualItem.cantidad : 0;
 
-        // Actualizar carrito lateral
+        // Actualizar carrito lateral y contador
         actualizarCarrito();
-        abrirCarrito();
+        actualizarContador();
     }
 
-    // Abrir carrito lateral
-    function abrirCarrito() {
-        carritoLateral.classList.add("abierto");
+    // Actualizar contador del carrito
+    function actualizarContador() {
+        const totalCantidad = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+        carritoContador.textContent = totalCantidad;
     }
 
     // Actualizar carrito lateral
@@ -88,7 +105,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         totalSpan.textContent = total;
     }
 
-        const whatsappBtn = document.querySelector('.btn-whatsapp');
+    // Botón WhatsApp con resumen del carrito
+    const whatsappBtn = document.querySelector('.btn-whatsapp');
     if (whatsappBtn) {
         whatsappBtn.addEventListener('click', function (e) {
             e.preventDefault();
@@ -104,24 +122,12 @@ document.addEventListener("DOMContentLoaded", async function() {
             }
 
             const mensajeCodificado = encodeURIComponent(mensaje);
-            const url = `https://web.whatsapp.com/send?phone=5493584194532&text=${mensajeCodificado}`;
+            // Detecta si es móvil para abrir la app, si no, abre web
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            const url = isMobile
+                ? `https://wa.me/5493584194532?text=${mensajeCodificado}`
+                : `https://web.whatsapp.com/send?phone=5493584194532&text=${mensajeCodificado}`;
             window.open(url, '_blank');
         });
     }
-    const overlay = document.getElementById('carrito-overlay');
-
-    function abrirCarrito() {
-        carritoLateral.classList.add("abierto");
-        overlay.classList.add("activo");
-    }
-
-    cerrarCarritoBtn.addEventListener("click", () => {
-        carritoLateral.classList.remove("abierto");
-        overlay.classList.remove("activo");
-    });
-
-    overlay.addEventListener("click", () => {
-        carritoLateral.classList.remove("abierto");
-        overlay.classList.remove("activo");
-    });
 });

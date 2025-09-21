@@ -359,4 +359,36 @@ body {
     .carrito-lateral.abierto {
         display: block;
     }
+.carrito-icono {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 6px 12px;
+    }
+.carrito-icono img {
+        width: 32px;
+        height: 32px;
+    }
+
+#carrito-contador {
+        background: #e74c3c;
+        color: #fff;
+        border-radius: 50%;
+        padding: 2px 7px;
+        font-size: 0.9em;
+        margin-left: -10px;
+        margin-top: -15px;
+        min-width: 22px;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+    }
+
 }

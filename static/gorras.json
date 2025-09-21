@@ -1,0 +1,148 @@
+[
+    {
+        "id": 1,
+        "nombre": "Vintage combinada",
+        "precio": 20,
+        "imagen": "/static/imagenes/vintage/Vintagecombinada.jpeg",
+        "imagenes": [
+            "/static/imagenes/vintage/Vintagecombinada.jpeg",
+            "/static/imagenes/vintage/Vintage1.png",
+            "/static/imagenes/vintage/Vintage2.png",
+            "/static/imagenes/vintage/vintage3.png",
+            "/static/imagenes/vintage/Vintage4.jpeg",
+            "/static/imagenes/vintage/Vintage5.png"
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Vintage Lisa",
+        "precio": 25,
+        "imagen": "/static/imagenes/vintagelisa/Vintagelisa.jpeg",
+        "imagenes": [
+            "/static/imagenes/vintagelisa/Vintagelisa.jpeg",
+            "/static/imagenes/vintagelisa/vintage1.jpeg",
+            "/static/imagenes/vintagelisa/vintage2.jpeg",
+            "/static/imagenes/vintagelisa/vintage3.jpeg",
+            "/static/imagenes/vintagelisa/vintage4.jpeg",
+            "/static/imagenes/vintagelisa/vintage5.jpeg",
+            "/static/imagenes/vintagelisa/vintage6.jpeg",
+            "/static/imagenes/vintagelisa/vintage7.jpeg",
+            "/static/imagenes/vintagelisa/vintage8.jpeg",
+            "/static/imagenes/vintagelisa/vintage9.jpeg",
+            "/static/imagenes/vintagelisa/vintage10.jpeg",
+            "/static/imagenes/vintagelisa/vintage11.jpeg",
+            "/static/imagenes/vintagelisa/vintage12.jpeg",
+            "/static/imagenes/vintagelisa/vintage13.jpeg",
+            "/static/imagenes/vintagelisa/vintage14.jpeg"
+
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Personalizado",
+        "precio": 25,
+        "imagen": "/static/imagenes/gorras/Personalizado.jpeg",
+        "imagenes": [
+            "/static/imagenes/gorras/Personalizado.jpeg"
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "F1 Gabardina",
+        "precio": 25,
+        "imagen": "/static/imagenes/gorras/Gabardina.jpeg",
+        "imagenes": [
+            "/static/imagenes/gorras/Gabardina.jpeg"
+        ]
+    },
+    {
+        "id": 5,
+        "nombre": "Pilusos",
+        "precio": 25,
+        "imagen": "/static/imagenes/pilusos/piluso.png",
+        "imagenes": [
+            "/static/imagenes/pilusos/piluso.png"
+        ]
+    },
+    {
+        "id": 6,
+        "nombre": "Casquettes",
+        "precio": 25,
+        "imagen": "/static/imagenes/casquettes/casquette.png",
+        "imagenes": [
+            "/static/imagenes/casquettes/casquette.png",
+            "/static/imagenes/casquettes/casquette1.png",
+            "/static/imagenes/casquettes/casquette2.png",
+            "/static/imagenes/casquettes/casquette3.png",
+            "/static/imagenes/casquettes/casquette4.png",
+            "/static/imagenes/casquettes/casquette5.png"
+        ]
+    },
+        {
+        "id": 7,
+        "nombre": "Textura Lycra",
+        "precio": 25,
+        "imagen": "/static/imagenes/textura_lycra/lycra.png",
+        "imagenes": [
+            "/static/imagenes/textura_lycra/lycra.png",
+            "/static/imagenes/textura_lycra/lycra1.png",
+            "/static/imagenes/textura_lycra/lycra2.png",
+            "/static/imagenes/textura_lycra/lycra3.png"            
+        ]
+    },
+    {
+        "id": 8,
+        "nombre": "Five Panel",
+        "precio": 25,
+        "imagen": "/static/imagenes/Five_panels/fivepanels.png",
+        "imagenes": [
+            "/static/imagenes/Five_panels/fivepanels.png",
+            "/static/imagenes/Five_panels/fivepanels1.png",
+            "/static/imagenes/Five_panels/fivepanels2.png",
+            "/static/imagenes/Five_panels/fivepanels3.png",
+            "/static/imagenes/Five_panels/fivepanels4.png",
+            "/static/imagenes/Five_panels/fivepanels5.png"           
+        ]
+    },
+    {
+        "id": 9,
+        "nombre": "Liviana Wter Proof",
+        "precio": 25,
+        "imagen": "/static/imagenes/liviana_water_proof/liviana.png",
+        "imagenes": [
+            "/static/imagenes/liviana_water_proof/liviana.png",
+            "/static/imagenes/liviana_water_proof/liviana1.png",
+            "/static/imagenes/liviana_water_proof/liviana2.png",
+            "/static/imagenes/liviana_water_proof/liviana3.png",
+            "/static/imagenes/liviana_water_proof/liviana4.png",
+            "/static/imagenes/liviana_water_proof/liviana5.png",
+            "/static/imagenes/liviana_water_proof/liviana6.png",
+            "/static/imagenes/liviana_water_proof/liviana7.png"           
+        ]
+    },
+        {
+        "id": 10,
+        "nombre": "Australiano",
+        "precio": 25,
+        "imagen": "/static/imagenes/australiano/australiano.png",
+        "imagenes": [
+            "/static/imagenes/australiano/australiano.png",
+            "/static/imagenes/australiano/australiano1.png",
+            "/static/imagenes/australiano/australiano2.png",
+            "/static/imagenes/australiano/australiano3.png",
+            "/static/imagenes/australiano/australiano4.png",
+            "/static/imagenes/australiano/australiano5.png",
+            "/static/imagenes/australiano/australiano6.png",
+            "/static/imagenes/australiano/australiano7.png"           
+        ]
+    },
+    {
+        "id": 11,
+        "nombre": "Gorro de Lana",
+        "precio": 25,
+        "imagen": "/static/imagenes/gorros_lana/lana.png",
+        "imagenes": [
+            "/static/imagenes/gorros_lana/lana.png"          
+        ]
+    }
+]

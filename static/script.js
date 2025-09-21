@@ -108,4 +108,20 @@ document.addEventListener("DOMContentLoaded", async function() {
             window.open(url, '_blank');
         });
     }
+    const overlay = document.getElementById('carrito-overlay');
+
+    function abrirCarrito() {
+        carritoLateral.classList.add("abierto");
+        overlay.classList.add("activo");
+    }
+
+    cerrarCarritoBtn.addEventListener("click", () => {
+        carritoLateral.classList.remove("abierto");
+        overlay.classList.remove("activo");
+    });
+
+    overlay.addEventListener("click", () => {
+        carritoLateral.classList.remove("abierto");
+        overlay.classList.remove("activo");
+    });
 });

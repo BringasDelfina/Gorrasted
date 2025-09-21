@@ -314,11 +314,12 @@ body {
     display: block;
 }
 
-/* Carrito lateral en móvil ocupa 80% */
-/* ...existing code... */
-
 /* Carrito lateral en móvil ocupa 90% y se oculta completamente */
 @media (max-width: 600px) {
+    .gorras-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
     .carrito-lateral {
         width: 90vw;
         right: -90vw;
@@ -331,13 +332,13 @@ body {
     }
     .gorras-item img,
     .main-img {
-        height: 140px;
+        height: 100px;
         max-width: 100%;
-        object-fit: contain; /* Para que no se recorten las imágenes */
+        object-fit: contain;
         background: #fff;
     }
     .gorras-item {
-        padding: 8px;
+        padding: 6px;
     }
     .social-links img {
         width: 50px;
@@ -359,5 +360,3 @@ body {
         display: block;
     }
 }
-
-/* ...existing code... */

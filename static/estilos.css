@@ -228,7 +228,7 @@ body {
     top: 0;
     right: -350px;   /* Oculto inicialmente */
     width: 320px;
-    height: 100vh;   /* altura exacta de ventana */
+    height: 100vh;
     background-color: #fff;
     border-left: 2px solid #ccc;
     box-shadow: -4px 0 8px rgba(0,0,0,0.2);
@@ -319,9 +319,10 @@ body {
 /* Carrito lateral en móvil ocupa 90% */
 @media (max-width: 600px) {
     .gorras-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 10px;
     }
+
     .carrito-lateral {
         width: 90vw;
         right: -90vw;
@@ -332,13 +333,28 @@ body {
     .carrito-lateral.abierto {
         right: 0;
     }
-    .gorras-item img,
+
+    /* imágenes de detalle más grandes */
     .main-img {
-        height: 100px;
-        max-width: 100%;
-        object-fit: contain;
-        background: #fff;
+        width: 100%;
+        height: auto;
+        max-height: 300px;
     }
+    .product-image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-image-gallery img {
+        width: 100%;
+        height: auto;
+        max-width: none;
+    }
+
+    .gorras-item img {
+        height: 180px;
+        object-fit: cover;
+    }
+
     .gorras-item {
         padding: 6px;
     }

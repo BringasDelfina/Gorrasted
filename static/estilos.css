@@ -220,13 +220,15 @@ body {
     width: 180px;
 }
 
-/* Carrito lateral */
+/* ===========================
+   CARRITO LATERAL
+=========================== */
 .carrito-lateral {
     position: fixed;
     top: 0;
-    right: -350px;
-    width: 300px;
-    height: 100%;
+    right: -350px;   /* Oculto inicialmente */
+    width: 320px;
+    height: 100vh;   /* altura exacta de ventana */
     background-color: #fff;
     border-left: 2px solid #ccc;
     box-shadow: -4px 0 8px rgba(0,0,0,0.2);
@@ -314,7 +316,7 @@ body {
     display: block;
 }
 
-/* Carrito lateral en móvil ocupa 90% y se oculta completamente */
+/* Carrito lateral en móvil ocupa 90% */
 @media (max-width: 600px) {
     .gorras-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -324,7 +326,7 @@ body {
         width: 90vw;
         right: -90vw;
         max-width: 90vw;
-        padding: 10px;
+        padding: 15px;
         box-shadow: -2px 0 6px rgba(0,0,0,0.15);
     }
     .carrito-lateral.abierto {
@@ -351,18 +353,16 @@ body {
     }
 }
 
-/* Oculta el carrito lateral por defecto en móvil */
-@media (max-width: 600px) {
-    .carrito-lateral {
-        display: none;
-    }
-    .carrito-lateral.abierto {
-        display: block;
-    }
+/* Icono carrito en navbar */
+.navbar .container {
+    position: relative;
+}
+
 .carrito-icono {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
     cursor: pointer;
     z-index: 1100;
     display: flex;
@@ -371,24 +371,21 @@ body {
     border-radius: 50px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 6px 12px;
-    }
+}
 .carrito-icono img {
-        width: 32px;
-        height: 32px;
-    }
-
+    width: 32px;
+    height: 32px;
+}
 #carrito-contador {
-        background: #e74c3c;
-        color: #fff;
-        border-radius: 50%;
-        padding: 2px 7px;
-        font-size: 0.9em;
-        margin-left: -10px;
-        margin-top: -15px;
-        min-width: 22px;
-        text-align: center;
-        font-weight: bold;
-        position: relative;
-    }
-
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.9em;
+    margin-left: -10px;
+    margin-top: -15px;
+    min-width: 22px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
 }

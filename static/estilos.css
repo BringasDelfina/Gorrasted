@@ -219,6 +219,19 @@ body {
     text-align: center;
     width: 180px;
 }
+@media (max-width: 768px) {
+    .product-image-gallery img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+
+    .product-image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 /* ===========================
    CARRITO LATERAL
@@ -228,7 +241,7 @@ body {
     top: 0;
     right: -350px;   /* Oculto inicialmente */
     width: 320px;
-    height: 100vh;
+    height: 100vh;   /* altura exacta de ventana */
     background-color: #fff;
     border-left: 2px solid #ccc;
     box-shadow: -4px 0 8px rgba(0,0,0,0.2);
@@ -236,6 +249,18 @@ body {
     overflow-y: auto;
     transition: right 0.3s ease;
     z-index: 10000;
+}
+@media (max-width: 600px) {
+    .carrito-lateral {
+        width: 90vw;
+        right: -100vw;   /* ⬅ aseguramos que quede bien escondido */
+        max-width: 90vw;
+        padding: 15px;
+        box-shadow: -2px 0 6px rgba(0,0,0,0.15);
+    }
+    .carrito-lateral.abierto {
+        right: 0;
+    }
 }
 
 .carrito-lateral.abierto {
@@ -319,10 +344,9 @@ body {
 /* Carrito lateral en móvil ocupa 90% */
 @media (max-width: 600px) {
     .gorras-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
-
     .carrito-lateral {
         width: 90vw;
         right: -90vw;
@@ -333,28 +357,13 @@ body {
     .carrito-lateral.abierto {
         right: 0;
     }
-
-    /* imágenes de detalle más grandes */
+    .gorras-item img,
     .main-img {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
+        height: 100px;
+        max-width: 100%;
+        object-fit: contain;
+        background: #fff;
     }
-    .product-image-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-    .product-image-gallery img {
-        width: 100%;
-        height: auto;
-        max-width: none;
-    }
-
-    .gorras-item img {
-        height: 180px;
-        object-fit: cover;
-    }
-
     .gorras-item {
         padding: 6px;
     }

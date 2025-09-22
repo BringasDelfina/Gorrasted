@@ -152,10 +152,6 @@ body {
         display: block;
     }
 
-    .gorras-grid {
-        grid-template-columns: 1fr;
-    }
-
     .hero-section h1 {
         font-size: 2em;
     }
@@ -250,18 +246,6 @@ body {
     transition: right 0.3s ease;
     z-index: 10000;
 }
-@media (max-width: 600px) {
-    .carrito-lateral {
-        width: 90vw;
-        right: -100vw;   /* ⬅ aseguramos que quede bien escondido */
-        max-width: 90vw;
-        padding: 15px;
-        box-shadow: -2px 0 6px rgba(0,0,0,0.15);
-    }
-    .carrito-lateral.abierto {
-        right: 0;
-    }
-}
 
 .carrito-lateral.abierto {
     right: 0;
@@ -349,7 +333,7 @@ body {
     }
     .carrito-lateral {
         width: 90vw;
-        right: -90vw;
+        right: -100vw;
         max-width: 90vw;
         padding: 15px;
         box-shadow: -2px 0 6px rgba(0,0,0,0.15);
